@@ -5,12 +5,12 @@
 /*
  *    Fill in host and port for Qlik engine
  */
-var prefix = window.location.pathname.substr( 0, window.location.pathname.toLowerCase().lastIndexOf( "/extensions" ) + 1 );
+var prefix = '/';
 var config = {
-	host: window.location.hostname,
+	host: 'g5no9ay42rhaj1v.sg.qlikcloud.com',
 	prefix: prefix,
-	port: window.location.port,
-	isSecure: window.location.protocol === "https:"
+	port: 443,
+	isSecure: true
 };
 require.config( {
 	baseUrl: ( config.isSecure ? "https://" : "http://" ) + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
