@@ -30,10 +30,11 @@ require( ["js/qlik"], function ( qlik ) {
 	var app = qlik.openApp('Sales Overview On-prem.qvf', config);
 
 	//get objects -- inserted here --
+	app.getObject('QV03','KVHwwx');
 	app.getObject('CurrentSelections','CurrentSelections');
 	
 	app.getObject('QV04','VqPugbQ');
-	app.getObject('QV03','KVHwwx');
+	
 	app.getObject('QV02','dVvj');
 	
 	
