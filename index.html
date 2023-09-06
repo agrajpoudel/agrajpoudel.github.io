@@ -25,7 +25,7 @@
       return isLoggedIn().then(loggedIn => {
         if (!loggedIn) {
           // check login
-            window.top.location.href = "https://g5no9ay42rhaj1v.sg.qlikcloud.com/login?qlik-web-integration-id=" + webIntegrationId + "&returnto=" + top.location.href;
+          window.top.location.href = "https://g5no9ay42rhaj1v.sg.qlikcloud.com/login?qlik-web-integration-id=" + webIntegrationId + "&returnto=" + top.location.href;
           throw new Error('not logged in');
         }
       });
@@ -35,6 +35,11 @@
 </head>
 
 <body style="height:600px;">
+
+  <!-- Embedding Single Sheet Using iFrame -->
   <iframe src="https://g5no9ay42rhaj1v.sg.qlikcloud.com/single/?appid=ffdff508-f2e1-46ee-8a21-cdd399ba7787&sheet=bfd09289-f071-4294-a204-f39d4575fc97&theme=horizon&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
+
+
+  <!-- Embedding app using iFrame -->
   <iframe src="https://g5no9ay42rhaj1v.sg.qlikcloud.com/sense/app/ffdff508-f2e1-46ee-8a21-cdd399ba7787" style="border:none;width:100%;height:100%;"></iframe>
 </html>
